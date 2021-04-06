@@ -56,7 +56,7 @@ public class ExchangeService {
         Integer accountId = exchangeRequestDto.getAccountId();
         Instrument fromInstrument = exchangeRequestDto.getBaseInstrument();
         Instrument toInstrument = exchangeRequestDto.getToInstrument();
-        // TODO: maybe check if instruments are the same?
+        // TODO: maybe check if instruments are the same? Also, check qty > 0
         double qty = exchangeRequestDto.getQty();
 
         // TODO: check for nulls
@@ -84,7 +84,7 @@ public class ExchangeService {
     private void send(ExchangeRequestDto exchangeRequestDto) {
         Integer baseAccountId = exchangeRequestDto.getAccountId();
         Instrument baseInstrument = exchangeRequestDto.getBaseInstrument();
-        // TODO: check for null;
+        // TODO: check for null & qty > 0;
         String targetAddress = exchangeRequestDto.getWalletAddress();
         double qty = exchangeRequestDto.getQty();
 
@@ -115,7 +115,7 @@ public class ExchangeService {
         Integer accountId = exchangeRequestDto.getAccountId();
         Instrument baseInstrument = exchangeRequestDto.getBaseInstrument(); // The instrument to be sold
         Instrument toInstrument = exchangeRequestDto.getToInstrument();
-        // TODO: maybe check if instruments are the same?
+        // TODO: maybe check if instruments are the same? Also, check qty > 0
         double qty = exchangeRequestDto.getQty();
 
         // TODO: check for nulls
